@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/selectorTema"
+        android:title="@string/selector_de_tema" />
+    <item
+        android:id="@+id/selectorDificultad"
+        android:title="@string/selector_de_dificultad" />
+</menu>

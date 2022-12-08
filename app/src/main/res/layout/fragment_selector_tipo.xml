@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2965ed"
+    tools:context=".Fragments.Selectores.SelectorTipo">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:id="@+id/btGeografia"
+        android:layout_width="397dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="32dp"
+        android:background="#2965ed"
+        android:contentDescription="@string/geografia"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icono_g"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/btCulturaGeneral"
+        android:layout_width="397dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#2965ed"
+        android:contentDescription="@string/cultura_general"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icono_c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btGeografia"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+    <ImageButton
+        android:id="@+id/btHistoria"
+        android:layout_width="397dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#2965ed"
+        android:contentDescription="@string/historia"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icono_h"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btCulturaGeneral"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
