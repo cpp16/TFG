@@ -92,7 +92,7 @@ public class Login extends Fragment {
                 c = db.rawQuery("select id, usuario, password from usuarios where usuario = '" + user + "' and password = '" + pass + "'", null);
                 try{
                     if(user.matches("") && pass.matches("")) {
-                        Toast toast = Toast.makeText(getContext(), "Introduzca email y contraseña", Toast.LENGTH_SHORT);
+                        Toast toast = Toast.makeText(getContext(), "Introduzca usuario y contraseña", Toast.LENGTH_SHORT);
                         toast.show();
                     }
                     if (c.moveToFirst()){
