@@ -128,26 +128,21 @@ public class Juego extends Fragment {
                             respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);
                         } else {
                             fallos++;
-                            respuestas_contestadas.add("id: " + numeroPregunta[pregunta] + " Respuesta: " + respuesta);
-                        }
+                            respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);                        }
                     } else if (preguntaB.isChecked()){
                         String respuesta = preguntaB.getText().toString();
                         if (lista_respuestas.contains(respuesta)){
                             aciertos++;
-                            respuestas_contestadas.add("id: " + numeroPregunta[pregunta] + " Respuesta: " + respuesta);
-                        } else {
+                            respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);                        } else {
                             fallos++;
-                            respuestas_contestadas.add("id: " + numeroPregunta[pregunta] + " Respuesta: " + respuesta);
-                        }
+                            respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);                        }
                     } else if (preguntaC.isChecked()) {
                         String respuesta = preguntaC.getText().toString();
                         if (lista_respuestas.contains(respuesta)) {
                             aciertos++;
-                            respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);
-                        } else {
+                            respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);                        } else {
                             fallos++;
-                            respuestas_contestadas.add("id: " + numeroPregunta[pregunta] + " Respuesta: " + respuesta);
-                        }
+                            respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);                        }
                     }
                     cargarPregunta(lista_preguntas, enunciado, preguntaA, preguntaB, preguntaC, pregunta);
                 } else {
