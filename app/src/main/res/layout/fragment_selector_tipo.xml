@@ -10,20 +10,21 @@
     <!-- TODO: Update blank fragment layout -->
     <ImageButton
         android:id="@+id/btGeografia"
-        android:layout_width="397dp"
+        android:layout_width="wrap_content"
         android:layout_height="188dp"
         android:layout_marginTop="32dp"
         android:background="#2965ed"
         android:contentDescription="@string/geografia"
         android:scaleType="fitCenter"
         android:src="@drawable/icono_g"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
         android:id="@+id/btCulturaGeneral"
-        android:layout_width="397dp"
+        android:layout_width="wrap_content"
         android:layout_height="188dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -33,12 +34,13 @@
         android:scaleType="fitCenter"
         android:src="@drawable/icono_c"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btGeografia"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
         android:id="@+id/btHistoria"
-        android:layout_width="397dp"
+        android:layout_width="wrap_content"
         android:layout_height="188dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
@@ -48,6 +50,7 @@
         android:scaleType="fitCenter"
         android:src="@drawable/icono_h"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btCulturaGeneral"
         tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
 

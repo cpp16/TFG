@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 import es.carlos.tfg.BaseDatos.BDPregunta;
 import es.carlos.tfg.BaseDatos.BDResultados;
 import es.carlos.tfg.BaseDatos.BDRetos;
 import es.carlos.tfg.BaseDatos.BDUsuarios;
 import es.carlos.tfg.Fragments.Login.Login;
+import es.carlos.tfg.Fragments.Selectores.SelectorNivel;
 import es.carlos.tfg.Fragments.Selectores.SelectorTipo;
 import es.carlos.tfg.R;
 

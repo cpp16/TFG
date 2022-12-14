@@ -120,7 +120,6 @@ public class Juego extends Fragment {
             @Override
             public void onClick(View view) {
                 if(pregunta < 9){
-                    pregunta++;
                     if (preguntaA.isChecked()){
                         String respuesta = preguntaA.getText().toString();
                         if (lista_respuestas.contains(respuesta)){
@@ -144,6 +143,7 @@ public class Juego extends Fragment {
                             fallos++;
                             respuestas_contestadas.add("id: " + lista_preguntas.get(pregunta).getId() + " Respuesta: " + respuesta);                        }
                     }
+                    pregunta++;
                     cargarPregunta(lista_preguntas, enunciado, preguntaA, preguntaB, preguntaC, pregunta);
                 } else {
                     btSiguiente.setClickable(false);
