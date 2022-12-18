@@ -49,6 +49,8 @@ public class Registro extends DialogFragment {
                 } else {
                     Toast toast=Toast.makeText(getContext(),"Introduzca un email valido",Toast.LENGTH_SHORT);
                     toast.show();
+                    Registro r = new Registro();
+                    r.show(getActivity().getFragmentManager(), "Registro");
                 }
             }
         });
