@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -154,23 +155,28 @@ public class Juego extends Fragment {
         btResultados.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String fecha = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
-                String preguntas = "";
-                for (int i = 0; i<9; i++){
-                    preguntas += lista_preguntas.get(i).toString() + "\n";
+                if (pregunta < 9){
+                    Toast toast = Toast.makeText(getContext(), "Debe contestar a todas las preguntas para ver los resultados", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    String fecha = java.text.DateFormat.getDateTimeInstance().format(Calendar.getInstance().getTime());
+                    String preguntas = "";
+                    for (int i = 0; i<9; i++){
+                        preguntas += lista_preguntas.get(i).toString() + "\n";
+                    }
+                    String respuestas = "";
+                    for (int i = 0; i<9; i++){
+                        respuestas += respuestas_contestadas.get(i) + "\n";
+                    }
+                    BDResultados bdResultados = new BDResultados(getContext());
+                    bdResultados.insertarResultado(usuario, fecha, aciertos, fallos, preguntas, respuestas);
+                    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                    FragmentTransaction transaction = fragmentManager.beginTransaction();
+                    transaction.setReorderingAllowed(true);
+                    transaction.replace(R.id.fragmentContainerView, Resultados.class, null);
+                    transaction.addToBackStack(null);
+                    transaction.commit();
                 }
-                String respuestas = "";
-                for (int i = 0; i<9; i++){
-                    respuestas += respuestas_contestadas.get(i) + "\n";
-                }
-                BDResultados bdResultados = new BDResultados(getContext());
-                bdResultados.insertarResultado(usuario, fecha, aciertos, fallos, preguntas, respuestas);
-                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-                transaction.setReorderingAllowed(true);
-                transaction.replace(R.id.fragmentContainerView, Resultados.class, null);
-                transaction.addToBackStack(null);
-                transaction.commit();
             }
         });
         // Inflate the layout for this fragment
